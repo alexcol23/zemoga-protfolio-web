@@ -1,0 +1,76 @@
+<section id="profile" class="home_banner_area" *ngIf="personalInfo">
+    <div class="container box_1620">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="banner_content">
+                <div class="media">
+                    <div class="d-flex">
+                        <img src="assets/img/personal.jpeg" alt="" style="    width: 600px;">
+                    </div>
+                    <div class="media-body">
+                        <div class="personal_text">
+                            <h6>Hello Everybody, i am</h6>
+                            <h3>{{personalInfo.name}} {{personalInfo.lastName}}</h3>
+                            <h4>Sr Software Developer</h4>
+                            <p>{{personalInfo.description}}</p>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Update Information
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Edit Personal Information</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form (ngSubmit)="savePersonalInfo(f)" #f="ngForm">
+                                            <div class="form-group">
+                                                <label for="first-name" class="col-form-label">first name:</label>
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="first-name"
+                                                       name="name"
+                                                       [ngModel]="personalInfo.name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="last-name" class="col-form-label">last name:</label>
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="last-name"
+                                                       name="lastName"
+                                                       [ngModel]="personalInfo.lastName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="profile-text" class="col-form-label">Description</label>
+                                                <textarea
+                                                        class="form-control"
+                                                        id="profile-text"
+                                                        name="description"
+                                                        [ngModel]="personalInfo.description">
+                                                </textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="submit" class="btn btn-primary" >Save changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="tweets" *ngIf="personalInfo">
+    <app-tweets [tweets]="tweets"></app-tweets>
+</section>

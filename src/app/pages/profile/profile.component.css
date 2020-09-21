@@ -1,0 +1,80 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+}
+
+@media (min-width: 1620px) {
+    .box_1620 {
+        max-width: 1620px;
+        margin: auto;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.home_banner_area {
+    position: relative;
+    background-image: linear-gradient(90deg, #41C477 0%, #afeecb 100%);
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.home_banner_area .box_1620 {
+    min-height: 700px;
+    border-radius: 12px;
+    position: relative;
+    bottom: -100px;
+    background: #fff;
+    padding: 30px;
+}
+
+.home_banner_area .banner_inner .banner_content .media .d-flex {
+    padding-right: 80px;
+}
+
+.home_banner_area .banner_inner .banner_content .media .media-body {
+    vertical-align: middle;
+    align-self: center;
+}
+/* Personal Profile Area css
+============================================================================================ */
+.personal_text h6 {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 12px;
+    color: #222222;
+}
+
+.personal_text h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+.personal_text h3 {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.personal_text p {
+    font-family: "Roboto", sans-serif;
+    max-width: 540px;
+    color: #777777;
+    margin-bottom: 40px;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+.jumbotron-text{
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 40px;
+}
+
